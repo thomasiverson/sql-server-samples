@@ -635,7 +635,7 @@ function PrepareNSG
         $subnet
     )
     Write-Host "Creating Network security group."
-    $networkSecurityGroupName = "AZLBProdManagedSQL-NSG"
+    $networkSecurityGroupName = "AZLBProdManagedSQL-nsg"
     $securityRules = $nsgVerificationResult['failedSecurityRules']
     $inboundRulePriority = 0
     $outboundRulePriority = 0
@@ -686,7 +686,7 @@ function PrepareRouteTable
         $subnet
     )
     Write-Host "Creating Route table."
-    $routeTableName = "AZLBProdManagedSQL-RouteTable"
+    $routeTableName = "AZLBProdManagedSQL-Route-Table"
     $routes = $routeTableVerificationResult['routes']
 
     Try
